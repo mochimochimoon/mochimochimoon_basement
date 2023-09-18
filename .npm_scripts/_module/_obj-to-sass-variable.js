@@ -34,7 +34,6 @@ const keyValueToSassElement = (key, value) => {
 };
 
 const objToSassMap = (obj) => {
-  console.log(obj)
   const elements = [];
   if (Array.isArray(obj)) {
     for(let item of obj) {
