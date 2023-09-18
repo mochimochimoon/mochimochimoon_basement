@@ -4,6 +4,7 @@
   border-radius: 25px;
   margin: 0 auto;
   min-height: 100px;
+  overflow: hidden;
 }
 
 .hover {
@@ -32,6 +33,7 @@ img {
   font-weight: 700;
   font-size: 40px;
   font-family: 'Darumadrop One', cursive;
+  line-height: 1;
   .small {
     font-size: .7em;
     margin-left: .5em;

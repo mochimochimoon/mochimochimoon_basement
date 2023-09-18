@@ -1,15 +1,28 @@
 .container {
-  max-width: 1200px;
+  box-sizing: border-box;
+  max-width: 375px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 10px;
+  @include pc() {
+    max-width: #{$breakpoint}px;
+    padding: 0 20px;
+  }
 }
 
 
+// .grid-container {
+//   margin: 0 auto;
+//   @for $i from 1 through 20 {
+//     &--#{$i} {
+//       max-width: gridWidth($i);
+//     }
+//   }
+// }
+
 .grid-container {
+  max-width: gridWidth(21);
   margin: 0 auto;
-  @for $i from 1 through 20 {
-    &--#{$i} {
-      max-width: gridWidth($i);
-    }
+  @include pc() {
+    max-width: gridWidth(19, $breakpoint, 20);
   }
 }

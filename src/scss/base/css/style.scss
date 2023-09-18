@@ -1,10 +1,16 @@
 @import '_reset/**/*';
 
-@function gridWidth($num) {
-  $width: 1200;
-  $gap: 20;
+$breakpoint: 1240;
+
+@mixin pc() {
+  @media screen and (min-width: #{$breakpoint}px) {
+    @content;
+  }
+}
+
+@function gridWidth($num, $containerWidth: 375, $gap: 10) {
   $length: 22;
-  $grid: ($width + $gap) / $length - $gap;
+  $grid: ($containerWidth + $gap) / $length - $gap;
   @return #{($gap + $grid) * $num - $gap}px;
 }
 
