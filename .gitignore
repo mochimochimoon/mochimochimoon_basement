@@ -1,6 +1,5 @@
 node_modules
 .DS_Store
 /_*
-!/_deploy
 package-lock.json
 .git
