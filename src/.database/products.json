@@ -3,11 +3,14 @@
     "head": "WEB",
     "items": [
       {
-        "head": "このページ",
+        "head": "mochimochimoonの基地",
         "thumb": "img/products/portfolio.png",
-        "description": "自己紹介や作成物を放り込んでおくサイト",
-        "url": "https://github.com/mochimochimoon/mochimochimoon_basement/",
+        "description": "※このページ。\n自己紹介や作成物を放り込んでおくサイト",
         "detailItems": [
+          {
+            "head": "URL",
+            "data": "https://mochimochimoon.github.io/mochimochimoon_basement/"
+          },
           {
             "head": "GitHub",
             "data": "https://github.com/mochimochimoon/mochimochimoon_basement"
@@ -29,7 +32,7 @@
         "detailItems": [
           {
             "head": "GitHub",
-            "data": "https://github.com/mochimochimoon/npmscripts_web_dev"
+            "data": "https://github.com/mochimochimoon/web-dev-npmscripts"
           },
           {
             "head": "使用言語",
@@ -37,7 +40,7 @@
           },
           {
             "head": "仕様",
-            "data": "srcファイルを元にWEB用ファイル（HTML/CSS/JS/画像/その他）ファイルを出力する\n1. 各ファイルの変換にも対応\n.pug/.ejs→.html, .scss→.css, .vue→.js\n2. 仮想サーバを立ち上げたリアルタイムプレビュー機能を搭載"
+            "data": "srcファイルを元にWEB用ファイル（HTML/CSS/JS/画像/その他）ファイルを出力\n1. 各ファイルの変換にも対応\n.pug/.ejs→.html, .scss→.css, .vue→.js\n2. 画像ファイルの自動圧縮\n3. 仮想サーバを立ち上げたリアルタイムプレビュー機能"
           }
         ]
       }
