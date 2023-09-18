@@ -3,7 +3,7 @@
   "scripts": {
     "build": "node ./.npm_scripts/index.js",
     "develop": "node ./.npm_scripts/index.js",
-    "deploy": "node ./.npm_scripts/index.js",
+    "docs": "node ./.npm_scripts/index.js",
     "env": "node ./.npm_scripts/env.js"
   },
   "devDependencies": {

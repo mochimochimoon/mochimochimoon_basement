@@ -33,7 +33,7 @@ const _SETTING = {
 const _COMMAND = command();
 console.log(`command_name: ${_COMMAND.name}`);
 
-const _DIST = `${(!_COMMAND.option.deploy)? '_': '.'}${_COMMAND.name || 'null'}`;
+const _DIST = `${(!_COMMAND.option.deploy)? '_': ''}${_COMMAND.name || 'null'}`;
 
 class Task {
   constructor(name, callback) {

@@ -15,5 +15,5 @@ npm run develop
 
 デプロイ
 ```
-npm run deploy --deploy
+npm run docs --deploy
 ```
