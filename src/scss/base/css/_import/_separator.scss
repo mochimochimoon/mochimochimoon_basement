@@ -1,6 +1,9 @@
 .separator {
   &--top-page-head {
-    margin: 60px 0;
+    margin-bottom: 60px;
+    @include pc() {
+      margin-bottom: 30px;
+    }
   }
   &--page-head {
     margin-bottom: 20px;

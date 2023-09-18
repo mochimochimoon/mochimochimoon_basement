@@ -235,13 +235,6 @@ img {
   max-width: 100%;
 }
 
-.top-page-head {
-  color: #fff;
-  text-align: center;
-  font-size: 60px;
-  font-family: "RocknRoll One", sans-serif;
-}
-
 .page-head {
   color: #fff;
   font-weight: 700;
@@ -569,7 +562,12 @@ footer {
 }
 
 .separator--top-page-head {
-  margin: 60px 0;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1240px) {
+  .separator--top-page-head {
+    margin-bottom: 30px;
+  }
 }
 .separator--page-head {
   margin-bottom: 20px;
@@ -602,9 +600,26 @@ main {
   padding: 20px 0;
 }
 
+.top-page-head {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-family: "RocknRoll One", sans-serif;
+}
+@media screen and (min-width: 1240px) {
+  .top-page-head {
+    font-size: 60px;
+  }
+}
+.top-page-head__item {
+  display: block;
+}
+@media screen and (min-width: 1240px) {
+  .top-page-head__item {
+    display: inline;
+  }
+}
+
 .tokkan {
   text-align: center;
-}
-.tokkan img {
-  max-width: 500px;
 }
