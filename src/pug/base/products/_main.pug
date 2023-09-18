@@ -1,12 +1,12 @@
 .separator.separator--page-head
-  .grid-container.grid-container--19
+  .grid-container
     h1.page-head
       | つくったもの
       span.small -products-
 
 -for(let content of data.database.products)
   .separator.separator--content
-    .grid-container.grid-container--19
+    .grid-container
       .content
         article.products-content
           .products-content__head
@@ -15,7 +15,7 @@
             -for(let item of content.items)
               li.products-content__item
                 section.products-item
-                  .products-item__left
+                  .products-item__content
                     .products-item__head
                       h2.products-item-head #{item.head}
                     .products-item__description
@@ -46,6 +46,6 @@
                               else
                                 +wrap-text(detailItem.data)
                   if(item.thumb)
-                    .products-item__right
+                    .products-item__thumb
                       p.products-item-thumb
                         img(src=rootPath(item.thumb), alt="")

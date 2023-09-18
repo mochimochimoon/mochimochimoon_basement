@@ -1,20 +1,38 @@
 .profile-content {
-  display: flex;
-  &__left {
-    flex: 0 0 auto;
-    margin-right: 20px;
+  @include pc () {
+    display: flex;
   }
-  &__right {
-    flex: 1 1 auto;
+  &__thumb {
+    margin-bottom: 20px;
+    @include pc () {
+      flex: 0 0 auto;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  }
+  &__body {
+    @include pc () {
+      flex: 1 1 auto;
+    }
   }
   &__name {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    @include pc () {
+      margin-bottom: 24px;
+    }
   }
   &__description {
     &:not(:last-child) {
-      margin-bottom: 16px;
+      margin-bottom: 10px;
+      @include pc () {
+        margin-bottom: 16px;
+      }
     }
   }
+}
+
+.profile-content-thumb {
+  text-align: center;
 }
 
 .profile-content-name {

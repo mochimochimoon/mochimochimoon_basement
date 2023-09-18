@@ -1,5 +1,8 @@
 .header {
-  height: 50px;
+  height: 30px;
+  @include pc() {
+    height: 50px;
+  }
 }
 
 .header-fixed {
@@ -13,7 +16,10 @@
 }
 
 .header-content {
-  height: 50px;
+  height: 30px;
+  @include pc() {
+    height: 50px;
+  }
   align-items: center;;
   display: flex;
   justify-content: space-between;
@@ -24,24 +30,34 @@
     display: flex;
     flex: 0 0 auto;
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 10px;
+      @include pc() {
+        margin-right: 20px;
+      }
     }
-    &--1grid {
-      flex-basis: gridWidth(1);
-    }
-    &--2grid {
+    &--home {
       flex-basis: gridWidth(2);
+      @include pc() {
+        flex-basis: gridWidth(1, $breakpoint, 20);
+      }
     }
-    &--3grid {
-      flex-basis: gridWidth(3);
+    &--link {
+      flex-basis: gridWidth(4);
+      @include pc() {
+        flex-basis: gridWidth(3, $breakpoint, 20);
+      }
     }
+
   }
 }
 
 .header-content-home {
   width: 100%;
   color: #fff;
-  font-size: gridWidth(1);
+  font-size: gridWidth(2);
+  @include pc() {
+    font-size: gridWidth(1, $breakpoint, 20);
+  }
   color: #393969;
   &__link {
     display: inline-block;
@@ -52,14 +68,18 @@
   font-family: 'Darumadrop One', cursive;
   background-color: #393969;
   width: 100%;
-  height: gridWidth(1);
+  height: gridWidth(2);
+  font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-weight: 700;
   border-radius: 5px;
-  font-size: 20px;
+  @include pc() {
+    height: gridWidth(1, $breakpoint, 20);
+    font-size: 20px;
+  }
   &.is-disable {
     background: #ccc;
     pointer-events: none;
