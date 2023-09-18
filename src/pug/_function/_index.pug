@@ -4,6 +4,6 @@
   const url = data.module['node-module'].nodeUrl();
 -
   const rootPath = (relative) => {
-    const toBase = path.relative(filename, 'src/pug/base');
+    const toBase = path.relative(path.dirname(filename), 'src/pug/base');
     return path.join(toBase, relative);
   }
