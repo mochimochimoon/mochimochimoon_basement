@@ -7,7 +7,7 @@ block init
   const _SETTING = Object.assign({
     title: 'title',
     description: 'description',
-    keywords: ['keyword1', 'keyword2'],
+    keywords: false, // ['', '']
     topJsList: [],
     bottomJsList: [
       '',
@@ -51,6 +51,7 @@ html(lang='ja')
         meta(property='og:site_name', content=_SETTING.siteName)
       if(_SETTING.ogpImg)
         meta(property='og:image', content=_SETTING.ogpImg)
+    <meta name="robots" content="noindex,nofollow">
     block meta
   body
     block script-top
