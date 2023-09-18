@@ -143,7 +143,7 @@ const taskWatch = new Task('watch', () => {
   const bs = browserSyncInit(_SETTING, _DIST);
   class Watcher {
     constructor(target, callback) {
-      watch(target, async (done) => {
+      watch([target, './src/.database/**/*', './src/.module/**/*'], async (done) => {
         console.log('--task[Watch]: file is changed');
         await callback();
         done();
