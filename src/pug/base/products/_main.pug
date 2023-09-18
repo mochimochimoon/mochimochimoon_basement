@@ -1,8 +1,8 @@
 .separator.separator--page-head
   .grid-container.grid-container--19
     h1.page-head
-      span.small products
       | つくったもの
+      span.small -products-
 
 -for(let content of data.database.products)
   .separator.separator--content
@@ -20,11 +20,12 @@
                       h2.products-item-head #{item.head}
                     .products-item__description
                       .products-item-description
-                        p #{item.description}
-                    if(item.url)
-                      .products-item__url
-                        .products-item-url
-                          a(href=item.url target='_blank' rel='noopener').hover #{item.url}
+                        p
+                          +wrap-text(item.description)
+                    //- if(item.url)
+                    //-   .products-item__url
+                    //-     .products-item-url
+                    //-       a(href=item.url target='_blank' rel='noopener').hover #{item.url}
                     .procuts-item__detail
                       table.products-item-detail
                         -for(let detailItem of item.detailItems)
@@ -41,7 +42,7 @@
                                   }
                                 }
                               if(isUrl(detailItem.data))
-                                a(href=item.url target='_blank' rel='noopener').hover #{detailItem.data}
+                                a(href=detailItem.data target='_blank' rel='noopener').hover #{detailItem.data}
                               else
                                 +wrap-text(detailItem.data)
                   if(item.thumb)

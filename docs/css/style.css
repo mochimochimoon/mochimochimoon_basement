@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=RocknRoll+One&display=swap");
 *, ::before, ::after {
   box-sizing: border-box;
   border-style: solid;
@@ -234,6 +234,13 @@ img {
   max-width: 100%;
 }
 
+.top-page-head {
+  color: #fff;
+  text-align: center;
+  font-size: 60px;
+  font-family: "RocknRoll One", sans-serif;
+}
+
 .page-head {
   color: #fff;
   font-weight: 700;
@@ -242,7 +249,7 @@ img {
 }
 .page-head .small {
   font-size: 0.7em;
-  margin-right: 0.5em;
+  margin-left: 0.5em;
 }
 
 .container {
@@ -496,6 +503,39 @@ footer {
   background: #ccc;
 }
 
+.profile-content {
+  display: flex;
+}
+.profile-content__left {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+.profile-content__right {
+  flex: 1 1 auto;
+}
+.profile-content__name {
+  margin-bottom: 24px;
+}
+.profile-content__description:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.profile-content-name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profile-content-description {
+  font-size: 16px;
+}
+.profile-content-description a {
+  color: #06c;
+  text-decoration: underline;
+}
+
+.separator--top-page-head {
+  margin: 60px 0;
+}
 .separator--page-head {
   margin-bottom: 20px;
 }
