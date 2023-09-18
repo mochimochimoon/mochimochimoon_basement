@@ -1,0 +1,9 @@
+
+-
+  const path = data.module['node-path'].default();
+
+-
+  const rootPath = (relative) => {
+    const toBase = path.relative(filename, 'src/pug/base');
+    return path.join(toBase, relative);
+  }

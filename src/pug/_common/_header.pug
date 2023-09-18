@@ -5,12 +5,12 @@ header.header
         .header-content__content
           .header-content__content.header-content__content--1grid
             h1.header-content-home
-              a(href="/").header-content-home__link.hover
+              a(href=rootPath('.')).header-content-home__link.hover
                 span.fas.fa-home
           .header-content__content
             .header-content__content.header-content__content--3grid
-              a(href="").header-content-link.hover.is-disable profile
+              a(href=rootPAth('profile')).header-content-link.hover.is-disable profile
             .header-content__content.header-content__content--3grid
-              a(href="/products").header-content-link.hover products
+              a(href=rootPath('products')).header-content-link.hover products
             .header-content__content.header-content__content--3grid
-              a(href="").header-content-link.hover.is-disable works
+              a(href=rootPath('works')).header-content-link.hover.is-disable works
