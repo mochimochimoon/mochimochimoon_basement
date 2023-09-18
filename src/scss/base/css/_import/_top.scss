@@ -1,6 +1,22 @@
+.top-page-head {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-family: 'RocknRoll One', sans-serif;
+  @include pc() {
+    font-size: 60px;
+  }
+  &__item {
+    display: block;
+    @include pc() {
+      display: inline;
+    }
+  }
+}
+
 .tokkan {
   text-align: center;
-  img {
-    max-width: 500px;
-  }
+  // img {
+  //   // max-width: 500px;
+  // }
 }
