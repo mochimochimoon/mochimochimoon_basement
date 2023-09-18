@@ -1,0 +1,9 @@
+mixin wrap-text (text)
+  -
+    const items = text.split('\n');
+  if(items.length <= 1)
+    | #{items[0]}
+  else
+    -for(let item of items)
+      span.wrap #{item}
+
