@@ -7,10 +7,16 @@
   }
   &--page-head {
     margin-bottom: 20px;
+    @include pc() {
+      margin-bottom: 30px;
+    }
   }
   &--content {
     &:not(:last-child) {
       margin-bottom: 20px;
+      @include pc() {
+        margin-bottom: 30px;
+      }
     }
   }
 }

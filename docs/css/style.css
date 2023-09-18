@@ -410,20 +410,16 @@ footer {
 }
 
 .products-content__head {
-  border-bottom: #ccc 1px solid;
-  padding-bottom: 10px;
-}
-.products-content__item {
-  padding-top: 20px;
+  margin-bottom: 10px;
 }
 .products-content__item:not(:last-child) {
-  padding-bottom: 20px;
-  border-bottom: 1px dotted #ccc;
+  margin-bottom: 10px;
 }
 
 .products-content-head {
   font-size: 20px;
   font-weight: 700;
+  color: #fff;
 }
 .products-content-head::before {
   content: "■";
@@ -572,21 +568,31 @@ footer {
 .separator--page-head {
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1240px) {
+  .separator--page-head {
+    margin-bottom: 30px;
+  }
+}
 .separator--content:not(:last-child) {
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1240px) {
+  .separator--content:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 body {
   background-color: #393969;
   background-image: url("../img/tsuki.png");
   background-repeat: no-repeat;
-  background-position: top 100px left -10px;
+  background-position: top 100px right -10px;
   background-attachment: fixed;
   background-size: auto 100px;
 }
 @media screen and (min-width: 1240px) {
   body {
-    background-position: top 100px left 20px;
+    background-position: top 100px right 20px;
     background-attachment: fixed;
     background-size: auto 150px;
   }
