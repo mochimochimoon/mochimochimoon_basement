@@ -1,0 +1,46 @@
+[
+  {
+    "head": "WEB",
+    "items": [
+      {
+        "head": "このページ",
+        "thumb": "img/products/portfolio.png",
+        "description": "自己紹介や作成物を放り込んでおくサイト",
+        "url": "https://github.com/mochimochimoon/mochimochimoon_basement/",
+        "detailItems": [
+          {
+            "head": "GitHub",
+            "data": "https://github.com/mochimochimoon/mochimochimoon_basement"
+          },
+          {
+            "head": "使用言語",
+            "data": "pug, sass(scss), js"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "head": "プログラミング",
+    "items": [
+      {
+        "head": "WEB開発環境",
+        "description": "WEBサイトコーディング作業を簡略化するための開発環境",
+        "detailItems": [
+          {
+            "head": "GitHub",
+            "data": "https://github.com/mochimochimoon/npmscripts_web_dev"
+          },
+          {
+            "head": "使用言語",
+            "data": "Javascript, Node.js, pug, ejs, sass(scss), Vue.js"
+          },
+          {
+            "head": "仕様",
+            "data": "srcファイルを元にWEB用ファイル（HTML/CSS/JS/画像/その他）ファイルを出力する\n1. 各ファイルの変換にも対応\n.pug/.ejs→.html, .scss→.css, .vue→.js\n2. 仮想サーバを立ち上げたリアルタイムプレビュー機能を搭載"
+          }
+        ]
+      }
+    ]
+  }
+]

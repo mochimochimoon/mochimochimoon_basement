@@ -5,6 +5,7 @@ import {createRequire} from 'module'; // ES6でrequireを使用
 const requireFunc = createRequire(import.meta.url);
 
 const importJsAsync = async (src) => {
+  src = path.resolve(src); // 絶対パスに変換しないとエラーでたので変換
   let errors = [];
   try {
     return requireFunc(src);
@@ -12,7 +13,7 @@ const importJsAsync = async (src) => {
     errors.push(e);
   }
   try {
-    return await import(src);
+    return Object.assign({}, await import(src)); // モジュール名前空間オブジェクトというものが読み込まれるので、普通のオブジェクトに変換。
   } catch(e) {
     errors.push(e);
   }
@@ -29,7 +30,7 @@ const dirToObjectAsync = async (dir) => {
       data[filename] = dirToObjectAsync(filePath);
     } else if (filename.match('.js')) {
       const basename = path.basename(filename, '.js');
-      data[basename] = importJsAsync(filePath);
+      data[basename] = await importJsAsync(filePath);
     }
   }
   return data;

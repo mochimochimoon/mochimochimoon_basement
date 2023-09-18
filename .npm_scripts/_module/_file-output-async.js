@@ -28,7 +28,7 @@ export default async function ({
       try {
         buffer = await convertor(buffer, file, arguments[0], arguments[1]);
       } catch(e) {
-        console.log(`-------      s module[fileOutputAsync]: convertor_error`);
+        console.log(`------- module[fileOutputAsync]: convertor_error`);
         console.log(file);
         console.log(e.message);
         return false;

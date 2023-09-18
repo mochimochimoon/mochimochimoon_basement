@@ -49,6 +49,7 @@
 }
 
 .header-content-link {
+  font-family: 'Darumadrop One', cursive;
   background-color: #393969;
   width: 100%;
   height: gridWidth(1);
@@ -58,6 +59,7 @@
   color: #fff;
   font-weight: 700;
   border-radius: 5px;
+  font-size: 20px;
   &.is-disable {
     background: #ccc;
     pointer-events: none;

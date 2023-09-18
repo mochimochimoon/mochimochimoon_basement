@@ -20,10 +20,13 @@ img {
   max-width: 100%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+
 .page-head {
   color: #fff;
   font-weight: 700;
   font-size: 40px;
+  font-family: 'Darumadrop One', cursive;
   .small {
     font-size: .7em;
     margin-right: .5em;
