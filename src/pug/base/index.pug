@@ -1,0 +1,36 @@
+extends /_layout/_portfolio
+
+block init
+  -
+    const input = {
+      title: 'title',
+      description: 'description',
+      keywords: ['keyword1', 'keyword2'],
+      topJsList: [],
+      bottomJsList: [
+        'js/script.js',
+      ],
+      cssList: [
+        'css/style.css',
+        'https://use.fontawesome.com/releases/v5.6.3/css/all.css'
+      ],
+      favicon: false,
+      // 以下OGP設定
+      ogp: false,
+      url: false,
+      siteName: false,
+      ogpImg: false,
+    };
+
+block meta
+
+block script-top
+  -for(let item of _SETTING.topJsList)
+    script(src=item)
+
+block main
+  include ./_body
+
+block script-bottom
+  -for(let item of _SETTING.bottomJsList)
+    script(src=item)

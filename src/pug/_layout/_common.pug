@@ -1,0 +1,59 @@
+doctype html
+block init
+  -
+    const _SETTING = Object.assign({
+      title: 'title',
+      description: 'description',
+      keywords: ['keyword1', 'keyword2'],
+      topJsList: [],
+      bottomJsList: [
+        '',
+      ],
+      cssList: [
+        '',
+      ],
+      favicon: false,
+      // 以下OGP設定
+      ogp: false,
+      url: false,
+      siteName: false,
+      ogpImg: false,
+    }, input);
+    if(_SETTING.ogp){
+      _SETTING.prefix = `og: ${_SETTING.url} fb: ${_SETTING.url} article: ${_SETTING.url}`
+    }
+
+html(lang='ja')
+  head(prefix=_SETTING.prefix)
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title #{_SETTING.title}
+    if(_SETTING.keywords)
+      meta(name='keywords', content=_SETTING.keywords.join(', '))
+    if(_SETTING.description)
+      meta(name='description', content=_SETTING.description)
+    if(_SETTING.favicon)
+      link(rel='shortcut icon', href=_SETTING.favicon, type='image/x-icon')
+    //- CSS
+    -for(let item of _SETTING.cssList)
+      link(rel="stylesheet", href=item)
+    if(_SETTING.url)
+      if(_SETTING.url)
+        meta(property='og:url', content=_SETTING.url)
+      meta(property='og:type', content='article')
+      meta(property='og:title', content=_SETTING.title)
+      meta(property='og:description', content=_SETTING.description)
+      if(_SETTING.siteName)
+        meta(property='og:site_name', content=_SETTING.siteName)
+      if(_SETTING.ogpImg)
+        meta(property='og:image', content=_SETTING.ogpImg)
+    block meta
+  body
+    block script-top
+    -for(let item of _SETTING.topJsList)
+      script(src=item)
+    block body
+    block script-bottom
+    -for(let item of _SETTING.bottomJsList)
+      script(src=item)

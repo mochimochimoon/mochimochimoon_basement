@@ -1,0 +1,15 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+
+.grid-container {
+  margin: 0 auto;
+  @for $i from 1 through 20 {
+    &--#{$i} {
+      max-width: gridWidth($i);
+    }
+  }
+}

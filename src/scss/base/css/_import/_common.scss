@@ -1,0 +1,31 @@
+.content {
+  padding: 20px 20px;
+  background: rgba(#fff, .95);
+  border-radius: 25px;
+  margin: 0 auto;
+  min-height: 100px;
+}
+
+.hover {
+  &:hover {
+    opacity: .7;
+    transition: opacity .2s;
+  }
+}
+.wrap {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+.page-head {
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
+  .small {
+    font-size: .7em;
+    margin-right: .5em;
+  }
+}

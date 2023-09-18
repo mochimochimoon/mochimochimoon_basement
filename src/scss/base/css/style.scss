@@ -1,0 +1,11 @@
+@import '_reset/**/*';
+
+@function gridWidth($num) {
+  $width: 1200;
+  $gap: 20;
+  $length: 22;
+  $grid: ($width + $gap) / $length - $gap;
+  @return #{($gap + $grid) * $num - $gap}px;
+}
+
+@import './_import/**/*';
