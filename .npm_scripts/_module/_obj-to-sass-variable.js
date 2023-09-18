@@ -14,7 +14,7 @@ const valueToSassValue = (value) => {
     break;}
     case 'object': {
       if(!value) {
-        return    s `'nullObj'`;
+        return `'nullObj'`;
       } else if (!Object.keys(value).length) {
         return `'blankObj'`;
       } else if (Object.keys(value).length > 1000 || value.length > 1000) {
@@ -41,9 +41,11 @@ const objToSassMap = (obj) => {
       elements.push(valueToSassValue(item));
     }
   } else {
-    for(let key in obj) {if(obj.hasOwnProperty(key)) {
-      elements.push(keyValueToSassElement(key, obj[key]));
-    }}
+    for(let key in obj) {
+      if(obj.hasOwnProperty(key)) {
+        elements.push(keyValueToSassElement(key, obj[key]));
+      }
+    }
   }
   return '(¥n' + elements.join(',¥n') + '¥n)';
 };
