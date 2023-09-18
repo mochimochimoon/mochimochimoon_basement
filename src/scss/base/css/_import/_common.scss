@@ -20,8 +20,13 @@ img {
   max-width: 100%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=RocknRoll+One&display=swap');
+.top-page-head {
+  color: #fff;
+  text-align: center;
+  font-size: 60px;
+  font-family: 'RocknRoll One', sans-serif;
+}
 .page-head {
   color: #fff;
   font-weight: 700;
@@ -29,6 +34,6 @@ img {
   font-family: 'Darumadrop One', cursive;
   .small {
     font-size: .7em;
-    margin-right: .5em;
+    margin-left: .5em;
   }
 }
